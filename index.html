@@ -1,43 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Bộ mã kí tự dùng cho trang web là UTF-8 -->
     <meta charset='utf-8'>
+    <!-- Xác định chế độ tương thích của trình duyệt với Internet Explorer -->
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <!-- Tiêu đề của Web -->
     <title>Video Call</title>
+    <!-- Cách trình duyệt hiển thị nội dung trên thiết bị di động -->
+    <!-- Yêu cầu trình duyệt dùng chiều rộng thiết bị, tỉ lệ zoom ban đầu là 1 -->
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- Liên kết với file style.css -->
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     
+    <!-- Liên kết tới Google Fonts, tạo font chữ -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <main>
         <!-- <div id="users-list"></div> -->
-
+        
+        <!-- Tạo ra tiêu đề cho trang web -->
         <h1 id="site-title">Video Chat</h1>
+
+        <!-- Giao diện bắt đầu của trang Web -->
+        <!-- Tạo ra ô nhập tên và nút Join Stream -->
         <div id="join-wrapper">
             <input id="username" type="text" placeholder="Enter your name..." />
             <button id="join-btn">Join Stream</button>
         </div>
+        <!-- Tạo ra một ô nhỏ chứa tên vừa nhập ở góc màn hình -->
         <div id="user-streams" ></div>
         
-
-
+        <!-- Giao diện phòng Call Video -->
         <!-- Wrapper for join button -->
         <div id="footer">
+            <!-- Lấy từ folder assets -->
             <div class="icon-wrapper">
+                <!-- Nút camera -->
                 <img class="control-icon" id="camera-btn" src="./assets/video.svg" />
                 <p>Cam</p>
             </div>
 
             <div class="icon-wrapper">
+                <!-- Nút mic -->
                 <img class="control-icon" id="mic-btn" src="./assets/microphone.svg" />
                 <p>Mic</p>
             </div>
 
             <div class="icon-wrapper">
+                <!-- Nút leave -->
                 <img class="control-icon" id="leave-btn" src="./assets/leave.svg" />
                 <p>Leave</p>
             </div>
@@ -45,7 +59,9 @@
 
     </main>
 
+    <!-- Đoạn mã tải xuống API AgoraRTC -> Dùng để xây dựng ứng dụng Video Call -->
     <script src="https://download.agora.io/sdk/release/AgoraRTC_N.js"></script>
+    <!-- Liên kết với script.js -->
     <script src='script.js'></script>
 </body>
 </html>
